@@ -1,22 +1,31 @@
-# test on Fedora 29
-# Repo
+#/usr/bin/bash
+
+set -euxo pipefail
+
+# Universal Package Manager
 snap
 
 # Tools
-i3
-vim
-tmux
-sxiv  # a better for feh image viewer
-htop
-s-tui
-tree
-lightdm
-lightdm-slick-greeter
-transmission
-transmission-daemon
+dnf install -y
+    i3 \
+    vim \
+    tmux \
+    sxiv \
+    firefox \
+    gnome-terminal \
+    git \
+    unzip \
+    tree \
+    htop \
+    s-tui \
+    lightdm \
+    transmission \
+    transmission-daemon \
+    mosh 
 
 
-# Security
-ykclients*
-ykpers*
-pam_yubico
+# Yubikey Essential
+dnf install -y
+    ykclients* \
+    ykpers* \
+    pam_yubico \
