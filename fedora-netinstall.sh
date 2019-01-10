@@ -3,7 +3,7 @@
 set -euxo pipefail
 
 # Universal Package Manager
-snap
+# snap
 
 # Tools
 dnf install -y
