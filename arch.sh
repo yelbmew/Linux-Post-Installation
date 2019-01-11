@@ -3,7 +3,7 @@
 set -euxo pipefail
 # X server
 yay -S --noconfirm \
-    xrandr
+    xrandr \
     xclip
 
 # Audio & Bluetooth
@@ -35,7 +35,7 @@ yay -s --noconfirm \
     vim \
     s-tui \
     htop \
-    mosh \
+    mosh 
 
 systemctl enable lightdm.service
 systemctl enable bluetooth.service

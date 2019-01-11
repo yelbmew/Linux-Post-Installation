@@ -1,12 +1,17 @@
 #/usr/bin/bash
 
-set -euxo pipefail
+set -euxo pipefail \
 
 # Universal Package Manager
-# snap
+sudo dnf isntall \
+    snapd 
+
+# X Server
+dnf groupinstall -y \
+    base-x
 
 # Tools
-dnf install -y
+dnf install -y \
     i3 \
     vim \
     tmux \
@@ -17,15 +22,13 @@ dnf install -y
     unzip \
     tree \
     htop \
-    s-tui \
     lightdm \
-    transmission \
-    transmission-daemon \
+    transmission-cli \
     mosh 
 
 
 # Yubikey Essential
-dnf install -y
+dnf install -y \
     ykclients* \
     ykpers* \
-    pam_yubico \
+    pam_yubico 
