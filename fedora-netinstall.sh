@@ -33,14 +33,41 @@ dnf install -y \
      ykpers* \
      pam_yubico 
 
-if [ -e $HOME/.vimrc ]; then
-    echo "File exits"
+# powerline for bash and tmux
+dnf install -y \
+    powerline \
+    powerline-fonts \
+    tmux-powerline
+
+bash="$HOME/.bashrc"
+tmux="$HOME/.tmux.conf"
+vim="$HOME/.vimrc"
+
+if [ ! -e $HOME/test ]; then
+    echo "File not exits"
+    curl -o $bash https://raw.githubusercontent.com/yelbmew/Public-Dot-Files/master/.bashrc
+    curl -o $HOME/.tmux.conf https://raw.githubusercontent.com/yelbmew/Public-Dot-Files/master/.tmux.conf
+    curl -o $HOME/.vimrc https://raw.githubusercontent.com/yelbmew/Public-Dot-Files/master/.vimrc
 fi
 
-ssh-keygen -t rsa -b 4096 -C "your@email.com" -f ~/.ssh/yourname
+if [ -e $HOME/bashrc ]; then
+cat >> $HOME/bashrc <<- EOF
+transfer() { if [ $# -eq 0 ];
+then echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi
+tmpfile=\$( mktemp -t transferXXX ); if tty -s; then basefile=\$(basename "\$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g');
+curl --progress-bar --upload-file "\$1" "https://transfer.sh/\$basefile" >> \$tmpfile;
+else curl --progress-bar --upload-file "-" "https://transfer.sh/\$1" >> \$tmpfile ; fi; cat \$tmpfile; rm -f \$tmpfile; }
+EOF
+fi 
 
-systemctl enable lightdm.service
-systemctl set-default graphical.service
+
+# implement git package manager
+    # vundle
+    # how to automate vundle install ?
+#
+
+# systemctl enable lightdm.service
+# systemctl set-default graphical.service
 # reboot
 
 
