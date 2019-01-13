@@ -2,44 +2,44 @@
 
 set -euxo pipefail \
 
-# ssh-keygen -t rsa -b 4096 -C "your@email" -f ~/.ssh/$USER
+ssh-keygen -t rsa -b 4096 -C "your@email" -f ~/.ssh/$USER
 
-# # Universal Package Manager
-# sudo dnf install \
-#     snapd 
-# 
-# # X Server
-# dnf groupinstall -y \
-#     base-x
-# 
-# # Tools
-# dnf install -y \
-#     firefox \
-#     git \
-#     gnome-terminal \
-#     htop \
-#     i3 \
-#     lightdm \
-#     mosh \
-#     sxiv \
-#     tmux \
-#     transmission-cli \
-#     tree \
-#     unzip \
-#     vim 
-# 
-# 
-# # Yubikey
-#  dnf install -y \
-#      ykclient* \
-#      ykpers* \
-#      pam_yubico 
-# 
-# # powerline for bash and tmux
-# dnf install -y \
-#     powerline \
-#     powerline-fonts \
-#     tmux-powerline
+# Universal Package Manager
+sudo dnf install \
+    snapd 
+
+# X Server
+dnf groupinstall -y \
+    base-x
+
+# Tools
+dnf install -y \
+    firefox \
+    git \
+    gnome-terminal \
+    htop \
+    i3 \
+    lightdm \
+    mosh \
+    sxiv \
+    tmux \
+    transmission-cli \
+    tree \
+    unzip \
+    vim 
+
+
+# Yubikey
+ dnf install -y \
+     ykclient* \
+     ykpers* \
+     pam_yubico 
+
+# powerline for bash and tmux
+dnf install -y \
+    powerline \
+    powerline-fonts \
+    tmux-powerline
 
 
 dots=(
@@ -68,11 +68,9 @@ fi
 
 vim +PluginInstall +qall
 
-# systemctl enable lightdm.service
-# systemctl set-default graphical.service
-# reboot
+systemctl enable lightdm.service
+systemctl set-default graphical.service
+reboot
 
-
-# n -> note
-# n: roll back to text base prompt login
+# note: roll back to text base prompt login
 # systemctl set-default multi-user.target
