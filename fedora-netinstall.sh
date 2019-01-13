@@ -5,15 +5,15 @@ set -euxo pipefail \
 ssh-keygen -t rsa -b 4096 -C "your@email" -f ~/.ssh/$USER
 
 # Universal Package Manager
-sudo dnf install \
+sudo dnf install -y \
     snapd 
 
 # X Server
-dnf groupinstall -y \
+sudo dnf groupinstall -y \
     base-x
 
 # Tools
-dnf install -y \
+sudo dnf install -y \
     firefox \
     git \
     gnome-terminal \
@@ -30,13 +30,13 @@ dnf install -y \
 
 
 # Yubikey
- dnf install -y \
+ sudo dnf install -y \
      ykclient* \
      ykpers* \
      pam_yubico 
 
 # powerline for bash and tmux
-dnf install -y \
+sudo dnf install -y \
     powerline \
     powerline-fonts \
     tmux-powerline
@@ -69,7 +69,7 @@ fi
 vim +PluginInstall +qall
 
 systemctl enable lightdm.service
-systemctl set-default graphical.service
+systemctl set-default graphical.target
 reboot
 
 # note: roll back to text base prompt login
