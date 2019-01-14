@@ -17,6 +17,20 @@ sudo dnf install -y \
      pam_yubico 
 
 
+# Audio & Bluetooth
+sudo dnf install -y \
+    bluez \
+    pavucontrol \
+    alsa-utils
+
+
+# Powerline for Bash and Tmux
+sudo dnf install -y \
+    powerline \
+    powerline-fonts \
+    tmux-powerline
+
+
 # X Server
 sudo dnf groupinstall -y \
     base-x
@@ -30,7 +44,6 @@ sudo dnf install -y \
     htop \
     i3 \
     i3lock \
-    lightdm \
     mosh \
     sxiv \
     tmux \
@@ -40,25 +53,12 @@ sudo dnf install -y \
     vim 
 
 
-# Audio & Bluetooth
-sudo dnf instal -y \
-    bluez \
-    pavucontrol \
-    alsa-utils
-
-
-# Powerline for Bash and Tmux
-sudo dnf install -y \
-    powerline \
-    powerline-fonts \
-    tmux-powerline
-
-
 # pull dot files from repo
 dots=(
         https://raw.githubusercontent.com/yelbmew/Public-Dot-Files/master/.bashrc
         https://raw.githubusercontent.com/yelbmew/Public-Dot-Files/master/.tmux.conf
         https://raw.githubusercontent.com/yelbmew/Public-Dot-Files/master/.vimrc
+        https://raw.githubusercontent.com/yelbmew/Public-Dot-Files/master/.xinitrc
      ); cd $HOME; for i in ${dots[@]}; do curl -O $i; done
 
 
@@ -87,7 +87,5 @@ fi
 
 # install Vim plugin listed in .vimrc
 vim +PluginInstall +qall
-
-systemctl enable bluetooth.service
 
 reboot

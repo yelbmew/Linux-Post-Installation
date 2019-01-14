@@ -16,7 +16,9 @@ Powerline for bash, tmux and vim has included and the end result will look like 
 ### How
 step 1: curl -o fedora.sh *URL* <br />
 step 2: chmod +x fedora.sh <br />
-step 3: ./fedora.sh
+step 3: ./fedora.sh <br />
+
+After reboot, login and type startx. I will skip display manager as of now.
 
 ### Pull Request
 If you find the script can be more simple or it is missing out on some tools or packages, **Please open a pull request**
