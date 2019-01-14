@@ -14,7 +14,9 @@ Powerline for bash, tmux and vim has included and the end result will look like 
 ![](https://i.imgur.com/iJBVGYR.png)
 
 ### How
-step 1: curl -o fedora.sh *URL* <br />
+
+#### Fedora example
+step 1: curl -o fedora.sh https://raw.githubusercontent.com/yelbmew/Linux-Post-Installation/master/fedora-netinstall.sh  <br />
 step 2: chmod +x fedora.sh <br />
 step 3: ./fedora.sh <br />
 
