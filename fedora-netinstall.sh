@@ -1,10 +1,11 @@
 #/usr/bin/bash
 
-set -euxo pipefail \
+set -euxo pipefail
 
 ssh-keygen -t rsa -b 4096 -C "your@email" -f ~/.ssh/$USER
 
-# Universal Package Manager
+
+# Snapd - Universal Package Manager
 sudo dnf install -y \
     snapd 
 
@@ -87,5 +88,6 @@ fi
 # install Vim plugin listed in .vimrc
 vim +PluginInstall +qall
 
+systemctl enable bluetooth.service
 
 reboot
