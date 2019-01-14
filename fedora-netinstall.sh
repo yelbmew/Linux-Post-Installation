@@ -68,8 +68,8 @@ fi
 
 vim +PluginInstall +qall
 
-systemctl enable lightdm.service
-systemctl set-default graphical.target
+# systemctl enable lightdm.service
+# systemctl set-default graphical.target
 reboot
 
 # note: roll back to text base prompt login
