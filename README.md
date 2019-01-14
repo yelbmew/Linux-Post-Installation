@@ -5,8 +5,8 @@
 
 
 ### Why
-The intention is to reduce the time I spend on setting up development environment on a new machine.
-You might probably find the script useful. 
+The intention is to reduce the time I spend on setting up development environment on a new machine. <br />
+You might probably find the script useful. <br />
 Powerline for bash, tmux and vim has included and the end result will look like this:
 ![](https://i.imgur.com/8Z1sEVp.png)
 
