@@ -8,9 +8,18 @@ ssh-keygen -t rsa -b 4096 -C "your@email" -f ~/.ssh/$USER
 sudo dnf install -y \
     snapd 
 
+
+# Yubikey
+ sudo dnf install -y \
+     ykclient* \
+     ykpers* \
+     pam_yubico 
+
+
 # X Server
 sudo dnf groupinstall -y \
     base-x
+
 
 # Tools
 sudo dnf install -y \
@@ -19,6 +28,7 @@ sudo dnf install -y \
     gnome-terminal \
     htop \
     i3 \
+    i3lock \
     lightdm \
     mosh \
     sxiv \
@@ -29,19 +39,21 @@ sudo dnf install -y \
     vim 
 
 
-# Yubikey
- sudo dnf install -y \
-     ykclient* \
-     ykpers* \
-     pam_yubico 
+# Audio & Bluetooth
+sudo dnf instal -y \
+    bluez \
+    pavucontrol \
+    alsa-utils
 
-# powerline for bash and tmux
+
+# Powerline for Bash and Tmux
 sudo dnf install -y \
     powerline \
     powerline-fonts \
     tmux-powerline
 
 
+# pull dot files from repo
 dots=(
         https://raw.githubusercontent.com/yelbmew/Public-Dot-Files/master/.bashrc
         https://raw.githubusercontent.com/yelbmew/Public-Dot-Files/master/.tmux.conf
@@ -49,6 +61,7 @@ dots=(
      ); cd $HOME; for i in ${dots[@]}; do curl -O $i; done
 
 
+# source: transfer.sh for easy/secure file sharing
 if [ -e $HOME/.bashrc ]; then
 cat >> $HOME/.bashrc <<- EOF
 transfer() { if [ \$# -eq 0 ];
@@ -59,18 +72,20 @@ else curl --progress-bar --upload-file "-" "https://transfer.sh/\$1" >> \$tmpfil
 EOF
 fi 
 
+
+# Vundle plugin manger for Vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
+
+# pull Vim colorscheme
 if [ -d $HOME/.vim ]; then
     mkdir -p $HOME/.vim/colors && cd $HOME/.vim/colors
     curl -o lucario.vim https://raw.githubusercontent.com/raphamorim/lucario/master/colors/lucario.vim
 fi
 
+
+# install Vim plugin listed in .vimrc
 vim +PluginInstall +qall
 
-# systemctl enable lightdm.service
-# systemctl set-default graphical.target
-reboot
 
-# note: roll back to text base prompt login
-# systemctl set-default multi-user.target
+reboot
