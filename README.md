@@ -13,8 +13,8 @@ Powerline for bash, tmux and vim has included and the end result will look like 
 ![](https://i.imgur.com/iJBVGYR.png)
 
 ### How
-step 1: curl -o fedora.sh *URL*
-step 2: chmod +x fedora.sh
+step 1: curl -o fedora.sh *URL* <br />
+step 2: chmod +x fedora.sh <br />
 step 3: ./fedora.sh
 
 ### Pull Request
