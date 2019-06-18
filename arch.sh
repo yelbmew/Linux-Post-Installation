@@ -7,7 +7,8 @@ ssh-keygen -t rsa -b 4096 -C "your@email" -f ~/.ssh/$USER
 # X server
 yay -S --noconfirm \
     xrandr \
-    xclip
+    xclip \
+    xorg
 
 # Audio & Bluetooth
 yay -S --noconfirm \
@@ -25,6 +26,7 @@ yay -s --noconfirm \
     i3-lock \ 
     i3-lock-color \
     i3-lock-fancy \
+    dunst
     rofi \
     lightdm \
     lightdm-slick-greeter \
