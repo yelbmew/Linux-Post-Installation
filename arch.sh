@@ -26,7 +26,7 @@ yay -s --noconfirm \
     i3-lock \ 
     i3-lock-color \
     i3-lock-fancy \
-    dunst
+    dunst \
     rofi \
     lightdm \
     lightdm-slick-greeter \
