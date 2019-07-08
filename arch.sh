@@ -31,7 +31,7 @@ yay -s --noconfirm \
     lightdm \
     lightdm-slick-greeter \
     feh \
-    firefox \
+    brave-git \
     gnome-terminal \
     git \
     tmux \
