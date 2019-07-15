@@ -17,7 +17,7 @@ yay -S --noconfirm \
     bluez-libs \
     bluez-utils \
     pulseaudio-alsa \
-    pulseaudio-bluetooth \
+    pulseaudio-bluetooth
 
 # Screen and Utility
 yay -s --noconfirm \
@@ -40,7 +40,8 @@ yay -s --noconfirm \
     vim \
     s-tui \
     htop \
-    mosh 
+    mosh \
+    ncdu
 
 
 # pull dot files from repo
