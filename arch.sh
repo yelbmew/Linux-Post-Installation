@@ -4,6 +4,10 @@ set -euxo pipefail
 
 ssh-keygen -t rsa -b 4096 -C "your@email" -f ~/.ssh/$USER
 
+# Pacman
+yay -S --noconfirm \
+    pacman-contrib
+
 # X server
 yay -S --noconfirm \
     xrandr \

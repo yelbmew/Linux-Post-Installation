@@ -20,5 +20,7 @@ yay -S --noconfirm \
     ngrep \
     socat \
     mitmproxy \
-    dstat
+    dstat \
+    gnu-netcat \
+    ufw
     
