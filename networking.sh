@@ -1,18 +1,11 @@
 ###############################################################################
-# Some of the useful
-#             _                      _    _               _              _
-#  _ __   ___| |___      _____  _ __| | _(_)_ __   __ _  | |_ ___   ___ | |___
-# | '_ \ / _ \ __\ \ /\ / / _ \| '__| |/ / | '_ \ / _` | | __/ _ \ / _ \| / __|
-# | | | |  __/ |_ \ V  V / (_) | |  |   <| | | | | (_| | | || (_) | (_) | \__ \
-# |_| |_|\___|\__| \_/\_/ \___/|_|  |_|\_\_|_| |_|\__, |  \__\___/ \___/|_|___/
-#                                                 |___/
-#
-# that don't comes default with Arch Linux
+# Some of the netwokring tools that don't come with Arch Linux
 ###############################################################################
 
 set -euxo pipefail
 
 yay -S --noconfirm \
+    masscan \
     traceroute \
     strace \
     mtr \
@@ -22,5 +15,7 @@ yay -S --noconfirm \
     mitmproxy \
     dstat \
     gnu-netcat \
-    ufw
-    
+    ufw \
+    fail2ban \
+    ipcalc \
+    pv              # monitor progress of data transfer through pipe

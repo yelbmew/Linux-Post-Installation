@@ -24,5 +24,5 @@ After reboot, login and type startx. I will skip display manager as of now.
 
 *you might want to update the email inside the script for the ssh key*
 
-#### Pull Request:
+### Pull Request:
 If you find the script can be more simple or it is missing out on some tools or packages, **Please open a pull request**

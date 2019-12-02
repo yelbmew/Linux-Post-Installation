@@ -50,7 +50,8 @@ sudo dnf install -y \
     transmission-cli \
     tree \
     unzip \
-    vim 
+    vim \
+    NetworkManager-wifi
 
 
 # pull dot files from repo
