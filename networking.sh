@@ -1,5 +1,5 @@
 ###############################################################################
-# Some of the netwokring tools that don't come with Arch Linux
+# Some of the networking tools that don't come with Arch Linux
 ###############################################################################
 
 set -euxo pipefail
