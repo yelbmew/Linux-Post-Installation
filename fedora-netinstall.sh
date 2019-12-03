@@ -91,6 +91,8 @@ if [ -d $HOME/.vim ]; then
     curl -o lucario.vim https://raw.githubusercontent.com/raphamorim/lucario/master/colors/lucario.vim
 fi
 
+# enable gnome-terminal to launch in i3 without using dbus-launch
+sudo bash -c 'echo LANG=\"en_US.UTF-8\" > /etc/default/locale'
 
 # install Vim plugin listed in .vimrc
 vim +PluginInstall +qall
