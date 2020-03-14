@@ -49,7 +49,8 @@ yay -s --noconfirm \
     s-tui \
     htop \
     mosh \
-    ncdu
+    ncdu \
+    fast
 
 
 # pull dot files from repo
