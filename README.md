@@ -1,7 +1,7 @@
 ## Linux Post Installation Script
 ### Distro cover:
-1. Fedora Netinstall (tested on fresh install)
-2. Arch (in tweaking)
+1. Fedora Netinstall
+2. Arch
 
 
 ### Why:

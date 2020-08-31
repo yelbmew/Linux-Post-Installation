@@ -23,6 +23,10 @@ yay -S --noconfirm \
     pulseaudio-alsa \
     pulseaudio-bluetooth
 
+# Graphic Card
+yay -S --noconfirm \
+    nvidia
+
 # Screen and Utility
 yay -s --noconfirm \
     i3 \
@@ -45,7 +49,8 @@ yay -s --noconfirm \
     s-tui \
     htop \
     mosh \
-    ncdu
+    ncdu \
+    fast
 
 
 # pull dot files from repo
