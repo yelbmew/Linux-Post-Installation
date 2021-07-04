@@ -13,8 +13,10 @@ sudo dnf install -y \
 # Yubikey
  sudo dnf install -y \
      ykclient* \
-     ykpers* \
      pam_yubico 
+     libyubikey \
+     yubikey-manager \
+     yubikey-personalization-gui
 
 
 # Audio & Bluetooth

@@ -89,7 +89,4 @@ fi
 # install Vim plugin listed in .vimrc
 vim +PluginInstall +qall
 
-
-systemctl enable lightdm.service
-systemctl enable bluetooth.service
 reboot
