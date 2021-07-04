@@ -17,11 +17,12 @@ yay -S --noconfirm \
 # Audio & Bluetooth
 yay -S --noconfirm \
     bluez \
-    alsa-utils
+    alsa-utils \
     bluez-libs \
     bluez-utils \
     pulseaudio-alsa \
-    pulseaudio-bluetooth
+    pulseaudio-bluetooth \
+    blueman
 
 # Graphic Card
 yay -S --noconfirm \
@@ -50,7 +51,8 @@ yay -s --noconfirm \
     htop \
     mosh \
     ncdu \
-    fast
+    fast \
+    barrier
 
 
 # pull dot files from repo

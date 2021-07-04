@@ -20,11 +20,12 @@ sudo dnf install -y \
 # Audio & Bluetooth
 sudo dnf install -y \
     bluez \
-    alsa-utils
+    alsa-utils \
     pulseaudio \
     pavucontrol \
     pulseaudio-libs \
-    pulseaudio-utils
+    pulseaudio-utils \
+    blueman
 
 
 # Powerline for Bash and Tmux
@@ -57,7 +58,8 @@ sudo dnf install -y \
     xclip \
     NetworkManager-wifi \
     dbus-x11 \
-    rofi
+    rofi \
+    barrier
 
 
 # pull dot files from repo
