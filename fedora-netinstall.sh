@@ -60,7 +60,8 @@ sudo dnf install -y \
     NetworkManager-wifi \
     dbus-x11 \
     rofi \
-    flameshot
+    flameshot \
+    lynx
 
 
 # pull dot files from repo

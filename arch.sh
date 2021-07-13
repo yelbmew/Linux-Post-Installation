@@ -28,7 +28,7 @@ yay -S --noconfirm \
     nvidia
 
 # Screen and Utility
-yay -s --noconfirm \
+yay -S --noconfirm \
     i3 \
     i3-gaps \
     i3-lock \ 
