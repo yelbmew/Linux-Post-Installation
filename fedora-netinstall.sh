@@ -59,7 +59,8 @@ sudo dnf install -y \
     xclip \
     NetworkManager-wifi \
     dbus-x11 \
-    rofi
+    rofi \
+    flameshot
 
 
 # pull dot files from repo

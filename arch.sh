@@ -50,7 +50,8 @@ yay -s --noconfirm \
     htop \
     mosh \
     ncdu \
-    fast
+    fast \
+    flameshot
 
 
 # pull dot files from repo
