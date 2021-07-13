@@ -22,11 +22,12 @@ sudo dnf install -y \
 # Audio & Bluetooth
 sudo dnf install -y \
     bluez \
-    alsa-utils
+    alsa-utils \
     pulseaudio \
     pavucontrol \
     pulseaudio-libs \
-    pulseaudio-utils
+    pulseaudio-utils \
+    blueman
 
 
 # Powerline for Bash and Tmux
@@ -61,7 +62,8 @@ sudo dnf install -y \
     dbus-x11 \
     rofi \
     flameshot \
-    lynx
+    lynx \
+    barrier
 
 
 # pull dot files from repo
